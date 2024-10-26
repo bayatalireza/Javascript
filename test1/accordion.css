@@ -61,3 +61,37 @@
     margin: 2rem 0 1rem 0;
 
 }
+
+div{
+    margin: 20px auto;
+    width: 85vw;
+    text-align: center;
+    padding-right: 0;
+
+}
+.scroll,.scroll2{
+    background-image: url('./icon/reshot-icon-bold-arrow-up-XUMCA9L6S5.svg');
+    background-color: red;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    cursor: auto !important;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.scroll2{
+    background-color: green;
+    left: 20px;
+}
+
+.scroll.show, .scroll2.show {
+    cursor: pointer !important;
+    opacity: 1;
+}

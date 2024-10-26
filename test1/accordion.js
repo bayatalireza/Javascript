@@ -2,13 +2,12 @@ let  accordions = document.querySelectorAll(".accordion")
 
 accordions.forEach(accordion => {
   Array.from(accordion.children).forEach(wrapper => {
-    console.log(wrapper.querySelector("span").textContent);
     
     if(wrapper.classList.contains("show")){
       let div = wrapper.querySelector('div')
       
       div.style.maxHeight= div.scrollHeight+30+"px";
-      console.log(div.style.maxheight);
+
     }
   
   
@@ -34,4 +33,36 @@ accordions.forEach(accordion => {
       })
     })
   })
+})
+let scroll = document.querySelector("button.scroll")
+let scroll2 = document.querySelector("button.scroll2")
+window.addEventListener("scroll", () => {
+  if(window.scrollY > 500){
+    scroll.classList.add("show")
+  } else {
+    scroll.classList.remove("show")
+  }
+})
+
+scroll.addEventListener("click", () => {
+  if(scroll.classList.contains("show")){
+
+    window.scrollTo({top: 0, behavior: "smooth"})
+  }
+})
+
+
+window.addEventListener("scroll", () => {
+  if(window.scrollY > 2500){
+    scroll2.classList.add("show")
+  } else {
+    scroll2.classList.remove("show")
+  }
+})
+
+scroll2.addEventListener("click", () => {
+  if(scroll2.classList.contains("show")){
+
+    document.querySelector("h2#article").scrollIntoView({top:0, behavior: "smooth"})
+  }
 })
