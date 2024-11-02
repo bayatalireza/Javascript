@@ -1,3 +1,13 @@
+*,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul li{
+    list-style: none;
+}
+
 .accordion div span {
     background: #eee;
     display: block;
@@ -95,3 +105,55 @@ div{
     cursor: pointer !important;
     opacity: 1;
 }
+
+.popup-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transition: all 0.5s;
+
+}
+
+.popup-wrapper.show {
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.popup{
+    background: #fff;
+    border: 1px solid #ddd;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s;
+}
+
+.popup.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup h4,
+.popup div {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 20px;
+}
+
+.popup h4 span.popup-close::after{
+    content: "\00D7";
+    float: right;
+    cursor: pointer;
+}
+
+.popup button.popup-close{
+    float: right;
+    margin: 15px 20px;
+}
+
