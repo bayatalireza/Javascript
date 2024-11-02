@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="./style.css" type="text/css" rel="stylesheet" />
+    <title>Learn JavaScript</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="m-3">
+        <h1 id="header">DOM</h1>
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <h5>Username: <span id="username"><i>Please write username</i></span></h5>
+            <h5>Password: <span id="password"><i>Please select a password</i></span></h5>
+            <hr>
+            <form action="" class="form">
+              <div class="form-group">
+                <label for="Username">Username </label>
+                <input class="form-control" type="text" name="username" placeholder="Username" id="Username">
+              </div>
+
+              <div class="form-group">
+                <label for="Password">Password </label>
+                <input class="form-control"  type="text" name="password" placeholder="Password" id="Password">
+              </div>
+              <input type="submit" name="submit" value="submit" class="btn btn-success">
+            </form>
+            <hr>
+            <h6>
+              See Password:
+              <span id="see-password"><i>Please select a password</i></span>
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+     <script src="validation.js"></script>
+  </body>
+</html>
