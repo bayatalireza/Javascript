@@ -128,11 +128,13 @@ div{
     border: 1px solid #ddd;
     position: fixed;
     left: 50%;
+    top: 10%;
     transform: translateX(-50%);
     border-radius: 8px;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s;
+    min-width: 400px;
 }
 
 .popup.show{

@@ -1,33 +1,29 @@
-let popupBtn = document.querySelector("button.popup-btn");
+let popupBtns = document.querySelectorAll("button.popup-btn");
 
-
-if (popupBtn) {
+if (popupBtns) {
   var popupWrapper = document.createElement("div");
   popupWrapper.className = "popup-wrapper";
   document.body.prepend(popupWrapper);
 }
-popupBtn.addEventListener("click", (e) => {
-  let popup = popupBtn.nextElementSibling;
-
+popupBtns.forEach((popupBtn) => {
+  popupBtn.addEventListener("click", (e) => {
+    let popup = popupBtn.nextElementSibling;
+    popup.classList.add("show");
+    popupWrapper.classList.add("show");
+    let popupClosesFunc = (e) => {
+      popup.classList.remove("show");
+      popupWrapper.classList.remove("show");
+    };
   
-  popup.classList.add("show");
-  popupWrapper.classList.add("show");
+    let closesPopup = document.querySelectorAll(".popup-close");
+    console.log(closesPopup);
+    closesPopup.forEach((pClose) => {
+      pClose.addEventListener("click", popupClosesFunc);
+    });
+    popupWrapper.addEventListener("click", popupClosesFunc);
+  });
 
-  let closesPopup = document.querySelectorAll(".popup-close");
-  console.log(closesPopup);
-    closesPopup.forEach(pClose => {
-      pClose.addEventListener("click", (e) => {
-        popup.classList.remove("show")
-        popupWrapper.classList.remove("show")
-      })
-    })
 });
-// let popupClosesFunc = (e) => {
-//   popup.classList.remove("show");
-//   popupWrapper.classList.remove("show");
-// };
-
-
 
 let accordions = document.querySelectorAll(".accordion");
 
