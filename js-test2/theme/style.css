@@ -1,25 +1,25 @@
-div.themes > div{
-      height: 20px;
-      width: 20px;
-      float: left;
-      cursor: pointer;
-      margin-right: 5px;
-      border: 1px solid #000;
+div.themes > div {
+  height: 20px;
+  width: 20px;
+  float: left;
+  cursor: pointer;
+  margin-right: 5px;
+  border: 1px solid #555;
 }
 
-.light{
-      background-color: #fff;
-      color: #000;
+.light {
+  background-color: #fff;
+  color: #252424;
 }
-.dark{
-      background-color: #000;
-      color: #fff;
+.dark {
+  background-color: #313030;
+  color: #fff;
 }
-.yellow{
-      background-color: #aaa257;
-      color: #000;
+.yellow {
+  background-color: #e0d461;
+  color: #000;
 }
-.green{
-      background-color: #a9f080;
-      color: #000;
+.green {
+  background-color: #a9f080;
+  color: #000;
 }
