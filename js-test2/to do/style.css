@@ -1,0 +1,21 @@
+.list-group-item > span,
+.list-group-item > img{
+      cursor: pointer;
+}
+
+.list-group-item{
+      position: absolute;
+}
+
+.list-group-item > img{
+      position: relative;
+      float: right;
+}
+
+video{
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      z-index: -1;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="../bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <title>To DO</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="w-50 mx-auto my-3">
+        <h1 id="header" class="text-center text text-light mt-5">To Dos</h1>
+        <div id="action" class="text-center mb-3">
+          <a href="" class="btn btn-primary" data-action="add">Add</a>
+          <a href="" class="btn btn-success" data-action="search">Search</a>
+        </div>
+        <div id="form-wrapper" class="mb-3">
+          <div id="add">
+            <input class="form-control" name="add" placeholder="add todo ..." />
+          </div>
+          <div id="search">
+            <input
+              class="form-control"
+              name="search"
+              placeholder="search todo ..."
+            />
+          </div>
+        </div>
+        <ul class="list-group" id="todos-list">
+          <li class="list-group-item">
+            <span>learn javaScript</span>
+            <img src="media/delete.png" alt="delete icon"  />
+          </li>
+          <li class="list-group-item">
+            <span>cleaned the house</span>
+            <img src="media/delete.png" alt="delete icon" />
+          </li>
+          <li class="list-group-item">
+            <span>go to the work</span>
+            <img src="media/delete.png" alt="delete icon"  />
+          </li>
+          <li class="list-group-item">
+            <span>watching tv</span>
+            <img src="media/delete.png" alt="delete icon"  />
+          </li>
+          <li class="list-group-item">
+            <span>write the letter</span>
+            <img src="media/delete.png" alt="delete icon"  />
+          </li>
+        </ul>
+      </div>
+    </div>
+    <video loop autoplay muted>
+      <source src="media/cut.mp4" type="video/mp4">
+    </video>
+    <script src="./Todos.js"></script>
+  </body>
+</html>
