@@ -1,16 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Script javascript</title>
-      <link rel="stylesheet" href="Style.css">
-      <link rel="stylesheet" href="bootstrap.min.css">
-</head>
-<body>
-      <div id="set">My counter: 0 seconds</div>
-      <div class="container"><button id="btn">Stop</button></div>
-      
-      <script src="./SlideShow.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Script javascript</title>
+    <link rel="stylesheet" href="Style.css" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="w-50 mx-auto my-3 text-center">
+        <h1>My slideShow</h1>
+        <p>slideShow written in html, css and javaScript.</p>
+        <hr />
+        <div class="slideShow">
+          <div class="slides">
+            <div class="slide active">
+              <img src="./images/1.jpg" alt="table" />
+              <div>
+                <p>my beautiful table</p>
+              </div>
+            </div>
+
+            <div class="slide">
+              <img src="./images/2.jpg" alt="the hill" />
+              <div>
+                <p>my beautiful hill</p>
+              </div>
+            </div>
+
+            <div class="slide">
+              <img src="./images/3.jpg" alt="eagle" />
+              <div>
+                <p>my beautiful eagle</p>
+              </div>
+            </div>
+
+            <div class="slide">
+              <img src="./images/4.jpg" alt="dog" />
+              <div>
+                <p>my beautiful dog</p>
+              </div>
+            </div>
+
+            <div class="slide">
+              <img src="./images/5.jpg" alt="cat" />
+              <div>
+                <p>my beautiful cat</p>
+              </div>
+            </div>
+            <span class="prev"> &#10094 </span>
+            <span class="next"> &#10095 </span>
+          </div>
+
+          <div class="points">
+
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./SlideShow.js"></script>
+  </body>
 </html>
