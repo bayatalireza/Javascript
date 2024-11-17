@@ -5,7 +5,6 @@ try {
   todos = todos.length ? todos : null;
 } catch (error) {
   todos = null;
-  console.long(null);
 }
 // set default value to todos
 if (!todos) {
@@ -69,9 +68,10 @@ Array.from(actions.children).forEach((e) => {
       element.preventDefault();
       formWrapper.innerHTML = `
             <form id="add">
-                  <input class="form-control" name="add" placeholder="add todo ..." />
+            <input class="form-control" name="add" placeholder="add todo ..." />
             </form>
-                  `;
+            `;
+            CreateTodos(todos);
       let added = document.querySelector("#add");
       added.addEventListener("click", (e) => {
         e.preventDefault();
@@ -95,6 +95,17 @@ Array.from(actions.children).forEach((e) => {
                   /> 
             </form> 
                   `;
+      let searched = document.querySelector("#search");
+      searched.addEventListener("keyup", (e) => {
+        e.preventDefault();
+        if(searched.search.value){
+
+          let filteredTodos = todos.filter(todo => todo.content.toLowerCase().includes(searched.search.value.toLowerCase()))
+          CreateTodos(filteredTodos)
+        }else{
+          CreateTodos(todos);
+        }
+      });
     });
   }
 });
