@@ -4,10 +4,15 @@ const calcTip = function (bill) {
 
 const bills = [125, 555, 44]
 
-const tip1= calcTip(bills[0])
-const tip2= calcTip(bills[1])
-const tip3= calcTip(bills[2])
+// const tip1= calcTip(bills[0])
+// const tip2= calcTip(bills[1])
+// const tip3= calcTip(bills[2])
 
-const tips = [tip1, tip2, tip3]
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])]
 
 console.log(bills, tips)
+
+const total = bills.reduce((acc, currentValue) => acc + currentValue, 0)
+
+
+console.log(`The total bill amount is: ${total}`)
